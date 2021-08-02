@@ -87,7 +87,8 @@ class WordAdapter(private val letterId: String, context: Context) :
         // ACTION_VIEW is a generic intent that takes a URI, in your case, a web address.
         // The system then knows to process this intent by opening the URI in the user's web browser.
         holder.button.setOnClickListener {
-            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            // val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            val queryUrl: Uri = Uri.parse("${WordListFragment.SEARCH_PREFIX}${item}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             // even though you aren't launching any particular activity in your app,
             // you're telling the system to launch another app, by calling startActivity() and pass in the intent
